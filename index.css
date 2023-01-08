@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: rgb(28, 28, 78);
+}
+
+.start {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(28, 28, 78);
+    transition: display 1s ease-in-out;
+}
+
+.start h1 {
+    color: white;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.start h2 {
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.player1,
+.player2 {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgb(16, 16, 50);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.player1 input[type="text"] {
+    margin: 5px;
+    width: 200px;
+    height: 30px;
+    border-style: none;
+    padding: 20px 10px;
+    background-color: transparent;
+    color: rgb(237, 23, 78);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.player2 input[type="text"] {
+    margin: 5px;
+    width: 200px;
+    height: 30px;
+    border-style: none;
+    padding: 20px 10px;
+    background-color: transparent;
+    color: rgb(255, 187, 0);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: rgba(0, 140, 255, 0.089) 0px 5px 15px;
+}
+
+.player1 p {
+    color: rgb(237, 23, 78);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.player2 p {
+    color: rgb(255, 187, 0);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#startGame {
+    padding: 5px 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-style: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.397) 0px 8px 24px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgb(3, 152, 204);
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#startGame:active {
+    opacity: 0.7;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(28, 28, 78);
+    transition: display 1s ease-in-out;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cross,
+.circle {
+    width: 150px;
+    height: fit-content;
+    background-color: rgb(16, 16, 50);
+    border-radius: 10px;
+    box-shadow: rgba(0, 110, 253, 0.164) 0px 5px 15px;
+    padding: 10px;
+    text-align: center;
+    margin: 0px 20px;
+}
+
+.cross h2 {
+    color: rgb(237, 23, 78);
+    font-weight: 600;
+    margin: 10px;
+}
+
+.circle h2 {
+    color: rgb(255, 187, 0);
+    font-weight: 600;
+    margin: 10px;
+}
+
+.reset {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px;
+    cursor: pointer;
+    border-style: none;
+}
+
+.reset:active {
+    opacity: 0.7;
+}
+
+.turns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 0 20px;
+}
+
+.turns p {
+    margin: 0 10px;
+    color: white;
+}
+
+.X,
+.O {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: rgba(1, 9, 32, 0.74) 0px 4px 12px;
+}
+
+.tic {
+    display: grid;
+    grid-gap: 10px 10px;
+    grid-template-columns: auto auto auto;
+    transition: display 1s ease-in-out;
+    background: linear-gradient(to top, rgb(31, 31, 230), rgb(123, 4, 173));
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.432) 0px 7px 29px 0px;
+}
+
+.box {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    border-radius: 10px;
+    background-color: rgb(16, 16, 50);
+    box-shadow: rgba(50, 50, 93, 0.342) 0px 50px 100px -20px, rgba(0, 0, 0, 0.753) 0px 30px 60px -30px, rgba(10, 37, 64, 0.808) 0px -2px 6px 0px inset;
+}
+
+.box:hover {
+    background-color: rgba(0, 255, 179, 0.26);
+    color: black;
+}
+
+.gameOver {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.432) 0px 7px 29px 0px;
+    background-color: rgb(253, 253, 253);
+}
+
+.gameOver img {
+    width: 200px;
+}
+
+.gameOver h1,
+h2 {
+    margin: 5px;
+}
+
+@media only screen and (max-width: 522px) {
+    .details {
+        flex-direction: column;
+    }
+
+    .cross,
+    .circle {
+        margin: 20px 0;
+    }
+
+    .container {
+        height: auto;
+        margin: 15px 0px;
+    }
+}
+
+@media only screen and (max-width: 362px) {
+    .tic {
+        width: 80%;
+        margin: 0;
+    }
+
+    .box {
+        width: 60px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 336px) {
+
+    .player1,
+    .player2 {
+        width: 90%;
+    }
+
+    #startGame {
+        width: 90%;
+    }
+}

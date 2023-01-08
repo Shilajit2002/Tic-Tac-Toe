@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="index.css" />
+        <title>Tic Tac Toe</title>
+    </head>
+
+    <body>
+        <!-- Start Game -->
+        <div class="start">
+            <h1>Welcome to Tic Tac Toe</h1>
+
+            <h2>~ Let's Play ~</h2>
+
+            <!-- Player 1 Detail -->
+            <div class="player1">
+                <p>X</p>
+                <input type="text" name="" id="one" placeholder="Enter Player 1 Name" />
+            </div>
+
+            <!-- Player 2 Detail -->
+            <div class="player2">
+                <p>O</p>
+                <input type="text" name="" id="two" placeholder="Enter Player 2 Name"/>
+            </div>
+
+            <!-- Start Game Button -->
+            <button id="startGame">Start Game</button>
+        </div>
+
+        <!-- Main Game -->
+        <div class="container">
+            <!-- Details of the Player -->
+            <div class="details">
+                <div class="cross"></div>
+                <button class="reset">Restart Game</button>
+                <div class="circle"></div>
+            </div>
+
+            <!-- Turn of The Player -->
+            <div class="turns">
+                <p>Turn :
+                <div class="X"></div>
+                </p>
+                <p>Turn :
+                <div class="O"></div>
+                </p>
+            </div>
+
+            <!-- Tic Tac Toe Box -->
+            <div class="tic">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+
+            <!-- Game Over Result -->
+            <div class="gameOver">
+            </div>
+        </div>
+    </body>
+    <script src="index.js"></script>
+
+</html>
