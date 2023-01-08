@@ -219,7 +219,7 @@ input:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
+    padding: 10px 0;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.432) 0px 7px 29px 0px;
     background-color: rgb(253, 253, 253);
@@ -231,7 +231,8 @@ input:focus {
 
 .gameOver h1,
 h2 {
-    margin: 5px;
+    margin: 5px 0;
+    text-align: center;
 }
 
 @media only screen and (max-width: 522px) {
@@ -257,8 +258,21 @@ h2 {
     }
 
     .box {
-        width: 60px;
+        width: 90%;
         height: 50px;
+        font-size: 100%;
+    }
+
+    .turns {
+        flex-direction: column;
+    }
+
+    .gameOver {
+        width: 80%;
+    }
+
+    .gameOver img {
+        width: 80%;
     }
 }
 
