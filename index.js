@@ -1,3 +1,6 @@
+let Ting=new Audio("./Ting Ding.mp3");
+let Ding=new Audio("./Ting Ting Bass.mp3");
+
 // Random Name Generator
 const randomNameGenerator = () => {
     let res = '';
@@ -105,13 +108,12 @@ const finish = () => {
         a.style.display = "flex";
 
         if (turn === `<p style="color:rgb(237,23,78);">X</p>`) {
+            Ding.play();
             a.innerHTML = `<h1>${playerOne} Win</h1>
            <img src="wiin.gif" alt="">`
         }
         else {
-            //     a.innerHTML = `<h1>${playerTwo} Win</h1>
-            //     <h2>${playerOne} Loss</h2>
-            //    <img src="sad.gif" alt="">`
+            Ding.play();
             a.innerHTML = `<h1>${playerTwo} Win</h1>
            <img src="wiin.gif" alt="">`
         }
@@ -151,6 +153,7 @@ const checkWin = () => {
 Array.from(box).forEach((elem) => {
     elem.addEventListener('click', (val) => {
         if (elem.innerHTML === "") {
+            Ting.play();
             elem.innerHTML = turn;
             checkWin();
             if (!isGameOver) {
